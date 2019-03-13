@@ -1,20 +1,20 @@
 <!--
 ABOUT
 -->
-<mat-card class="example-card">
+<div fxLayout="column">
+<mat-card fxFlex="1 1 auto" class="example-card">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>¿Quienes somos?</mat-card-title>
     <mat-card-subtitle>CONSULTORÍA INTELIGENTE PARA EL DESARROLLO INDUSTRIAL</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <p>
       trabajamos para satisfacer los requerimientos de
-      <strong>consultoría</strong>, <strong>capacitación</strong>,
-       <strong>selección</strong> y <strong>soporte al recurso humano</strong>.
-    </p>
+      <strong>consultoría</strong>,
+      <strong>capacitación</strong>,
+      <strong>selección</strong> y
+      <strong>soporte al recurso humano</strong>.
   </mat-card-content>
-  <img mat-card-image src="assets/img/ourTeam.png" alt="Nuestro equipo">
+  <img  src="assets/img/ourTeam.png" alt="Nuestro equipo" width="80%">
   <mat-card-actions>
     <a mat-raised-button routerLink="about">Conoce más</a>
   </mat-card-actions>
@@ -25,9 +25,8 @@ ABOUT
 <!--
 SOLUTIONS
 -->
-<mat-card class="example-card">
+<mat-card fxFlex="1 1 auto" class="example-card">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>Soluciones</mat-card-title>
     <mat-card-subtitle>empresas que confían en nosotros</mat-card-subtitle>
   </mat-card-header>
@@ -35,12 +34,11 @@ SOLUTIONS
     <!--
     SPONSORS!
     -->
-    <div fxLayout="column">
-      <div fxLayout="row" fxLayout.lt-md="column">
-        <div fxFlex="1 1 auto" *ngFor="let sponsor of sponsors; i as index">
-          <img src="{{sponsor.path}}" alt="{{sponsor.label}}"
-               width="200" height="70"></div>
-      </div>
+    <div fxLayout="row wrap" fxLayout.lt-sm="column">
+      <div fxFlex="1 1 auto" *ngFor="let sponsor of sponsors">
+        <img src="{{sponsor.path}}" alt="{{sponsor.label}}"
+             width="100" height="70">
+       </div>
     </div>
 
   </mat-card-content>
@@ -48,3 +46,4 @@ SOLUTIONS
     <a mat-raised-button routerLink="solutions">Conoce más</a>
   </mat-card-actions>
 </mat-card>
+</div>

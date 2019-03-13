@@ -1,41 +1,51 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div fxFlexFill fxLayout="column" style="text-align:center" height="100%">
 
-<mat-toolbar>
-  <a mat-button  routerLink=""><span class="mat-display-2">{{navTitle}}</span></a>
-</mat-toolbar>
+  <mat-toolbar fxFlex="none">
+    <a mat-button  routerLink="">
+      <span class="mat-display-1">{{navTitle}}</span>
+    </a>
+  </mat-toolbar>
 
-<router-outlet></router-outlet>
+  <router-outlet fxFlex="grow"></router-outlet>
+
+
+  <mat-card fxFlex="none" class="footer-card" fxLAyoutAlign="end">
+    <mat-card-content flexLayout="column">
+      <div flexLayout.gt-md="row" flexLayout="column">
+        <p class="mat-body-2">  GRUPO CIDI  </p>
+        <p class="mat-body-1">
+          Av. Adolfo Lopéz Mateos #9 int 5, Barrio San  Martín, Tepotzotlán, Estado de México.
+        </p>
+
+        <mat-divider></mat-divider>
+
+        <div>
+          <p class="mat-body-1">Contacto</p>
+
+          <p class="mat-body-1">(0155) 58768246</p>
+          <p class="mat-body-1">(0155) 52064028</p>
+          <p class="mat-body-1">(0155) 53935177</p>
+          <p class="mat-body-1">(0155) 58767046</p>
+        </div>
+        <div>
+          <a mat-icon-button href="https://www.facebook.com/GrupoCidiSolucionesEfectivas/ ">
+            <i class="fab fa-facebook-square" aria-label="Facebook"> grupo cidi</i>
+          </a>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+
+      <span class="mat-caption">
+        designed by </span>
+      <span fxHide.lt-sm="true" class="mat-caption">
+        Ulises Rodrigo Gonzalez Osnaya, 
+      </span>
+      <span class="mat-caption">
+        ulywhy@gmail.com
+      </span>
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
 </div>
-
-<mat-toolbar>
-  <mat-toolbar-row>
-    <p class="mat-body-2">
-      GRUPO CIDI
-    </p>
-  </mat-toolbar-row>
-
-
-  <mat-toolbar-row>
-
-<p class="mat-body-1">
-  Colina de los aconitos No. 41, Desp. 203.<br>
-  Colonia Boulevares, Ciudad Satélite, Naucalpan de Juarez, Estado de México.
-</p><br>
-</mat-toolbar-row>
-
-<mat-toolbar-row>
-  <p class="mat-body-1">
-    Telefonos:<br>
-    (0155) 55627989<br>
-    (0155) 53935177
-  </p>
-</mat-toolbar-row>
-
-<mat-toolbar-row>
-<p class="mat-caption">
-  designed by Ulises Rodrigo Gonzalez Osnaya | ulywhy@gmail.com
-</p>
-</mat-toolbar-row>
-
-</mat-toolbar>

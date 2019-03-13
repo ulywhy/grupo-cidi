@@ -2,3 +2,14 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+p {
+  word-wrap: break-word;
+}
+
+
+.footer-card{
+  text-align: left;
+  border-top: 1px solid #bbb;
+  background-color: #ddd;
+}

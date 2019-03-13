@@ -1,15 +1,15 @@
-<div fxLayout='column'>
-  <div fxLayout='row' fxLayout.lt-md="column">
+<div fxLayout='row'>
+  <div fxLayout='column'>
 
-    <div fxFlex="3 1 auto" fxFlex.sm="1 1 auto">
-      <mat-card class="example-card">
+    <div fxFlex="auto">
+      <mat-card>
         <mat-card-header>
           <div mat-card-avatar class="example-header-image"></div>
           <mat-card-title>¿Quienes somos?</mat-card-title>
           <mat-card-subtitle>CONSULTORÍA INTELIGENTE PARA EL DESARROLLO INDUSTRIAL</mat-card-subtitle>
           <img mat-card-image width="80" height="150"
                 src="assets/img/consultoria.jpeg" alt="Nuestro equipo">
-        </mat-card-header>
+          </mat-card-header>
         <mat-card-content>
           <p>
             GRUPO CIDI tiene sus orígenes como un pequeño despacho que inicialmente
@@ -20,24 +20,9 @@
       </mat-card>
     </div>
 
-    <div fxFlex="1 1 auto">
-      <mat-card class="example-card">
-        <mat-card-content>
-          <mat-list>
-            <h3 mat-subheader>Valores</h3>
-            <mat-list-item *ngFor="let value of values">
-              <mat-icon mat-list-icon>stars</mat-icon>
-              <h4 mat-line>{{value}}</h4>
-            </mat-list-item>
-          </mat-list>
-        </mat-card-content>
-      </mat-card>
-    </div>
-
-
   <!--ROW!-->
 
-    <div fxFlex="4 1 auto">
+    <div fxFlex="auto">
 
       <mat-card>
           <mat-card-header>
@@ -63,4 +48,21 @@
       </mat-card>
     </div>
   </div>
+
+
+    <div fxHide.lt-sm="true" fxFlex="grow">
+      <mat-card class="example-card">
+        <mat-card-content>
+          <mat-list>
+            <h3 mat-subheader>Valores</h3>
+            <mat-list-item *ngFor="let value of values">
+              <mat-icon mat-list-icon>stars</mat-icon>
+              <h4 mat-line>{{value}}</h4>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+
 </div>
