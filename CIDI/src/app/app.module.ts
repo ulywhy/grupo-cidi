@@ -11,6 +11,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 // MATERIAL MODULES
+import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -35,9 +36,10 @@ import { SolutionsComponent } from './solutions/solutions.component';
     BrowserModule,
     AppRoutingModule,
     //material core
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
     FlexLayoutModule,
     //material modules
+    MatSidenavModule,
     MatCardModule,
     MatToolbarModule,
     MatGridListModule,
