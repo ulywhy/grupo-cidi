@@ -19,18 +19,22 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
+
 
 //CUSTOM COMPONENTS
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { SolutionsComponent } from './solutions/solutions.component';
+import { MoreOnServiceComponent } from './more-on-service/more-on-service.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     HomeComponent,
-    SolutionsComponent
+    SolutionsComponent,
+    MoreOnServiceComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,8 @@ import { SolutionsComponent } from './solutions/solutions.component';
     MatButtonModule,
     MatDividerModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+		MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

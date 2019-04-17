@@ -1,10 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
   <div fxFlexFill fxLayout="column" style="text-align:justify" height="100%">
 
-  <mat-toolbar fxFlex="none" color="primary">
-    <a mat-button routerLink="">
-      <span  class="mat-display-1">{{navTitle}}</span>
-    </a>
+  <mat-toolbar fxFlex="none" color="primary" fxLayoutGap="10px">
+		<button mat-button routerLink="" color="white">
+			<i class="fas fa-home fa-2x" color="white"></i>
+		</button>
+		{{company.name}}
+  	<span fxFlex="1 1 auto"></span>
+		<div fxHide.lt-sm="true" fxLayoutGap="10px">
+			<button mat-stroked-button color="white">servicios</button>
+			<button mat-stroked-button color="white" (click)="scroll(Contactos)">contacto</button>
+		</div>
+		<button fxShow.lt-sm="true" fxHide="true" mat-icon-button>
+			<span class="fas fa-bars" aria-label="Menu"></span>
+		</button>
+
   </mat-toolbar>
 
   <router-outlet fxFlex="grow"></router-outlet>
@@ -12,29 +22,32 @@
 
   <mat-toolbar fxFlex="none" fxLayout="column" color="primary">
       <mat-toolbar-row>
-        <p class="mat-body-2">  GRUPO CIDI  </p>
+        <p class="mat-body-2">  {{company.name}}  </p>
       </mat-toolbar-row>
-      <mat-toolbar-row fxLayout="row">
-        <a mat-icon-button href="https://www.facebook.com/GrupoCidiSolucionesEfectivas/ ">
-          <i class="fab fa-facebook-square" aria-label="Facebook"> grupo cidi</i>
+      <mat-toolbar-row fxLayout="row wrap" fxLayoutGap="10px"  #Contactos>
+        <a fxFlex mat-icon-button href="{{company.facebook.link}}">
+          <i class="fab fa-facebook-square fa-lg" aria-label="Facebook"></i>
+					{{company.facebook.page}}
         </a>
+				<a fxFlex mat-icon-button href="mailto:{{company.email.address}}?{{company.email.header}}">
+          <i class="fas fa-envelope fa-lg" aria-label="email"></i>
+					{{company.email.address}}
+        </a>
+				<span fxFlex="4 4 auto" fxFlex.lt-md="shrink"></span>
       </mat-toolbar-row>
+
       <mat-toolbar-row fxLayout="row wrap" fxLayoutGap="10px">
-        <p class="mat-body-1">(0155) 58768246</p>
-        <p class="mat-body-1">(0155) 52064028</p>
-      </mat-toolbar-row>
-      <mat-toolbar-row fxLayout="row wrap" fxLayoutGap="10px">
-        <p class="mat-body-1">(0155) 53935177</p>
-        <p class="mat-body-1">(0155) 58767046</p>
+				<a *ngFor="let phone of company.phones" mat-button color="white" href="tel:{{phone}}" class="mat-body-1">{{phone}}</a>
+				<span fxFlex="4 4 auto" fxFlex.lt-md="shrink"></span>
       </mat-toolbar-row>
       <mat-toolbar-row>
-          <p class="mat-caption">
-            Av. Adolfo Lopéz Mateos #9 int 5,
-            Barrio San Martín, Tepotzotlán, Estado de México.
-          </p>
+				<span fxFlex="2 2 auto"></span>
+      	<p class="mat-caption">{{company.address}}</p>
+				<span fxFlex="2 2 auto"></span>
       </mat-toolbar-row>
       <mat-toolbar-row fxLayoutGap="2px">
-        <span class="mat-caption">
+        <span fxFlex="2 2 auto"></span>
+				<span class="mat-caption">
           designed by </span>
         <span fxHide.lt-sm="true" class="mat-caption">
           Ulises Rodrigo Gonzalez Osnaya,
@@ -42,6 +55,7 @@
         <span class="mat-caption">
           ulywhy@gmail.com
         </span>
+				<span fxFlex="2 2 auto"></span>
       </mat-toolbar-row>
   </mat-toolbar>
 </div>

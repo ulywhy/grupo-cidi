@@ -1,26 +1,31 @@
 <!--
 ABOUT
 -->
-<div fxLayout="column">
-<mat-card fxFlex="1 1 auto" class="example-card">
+<div fxLayout="column" fxLayoutGap="10px" align="center">
+<mat-card fxFlex="1 1 auto">
   <mat-card-header>
-    <mat-card-title>¿Quienes somos?</mat-card-title>
-    <mat-card-subtitle>CONSULTORÍA INTELIGENTE PARA EL DESARROLLO INDUSTRIAL</mat-card-subtitle>
+    <mat-card-title>CONSULTORÍA INTELIGENTE PARA EL DESARROLLO INDUSTRIAL</mat-card-title>
+    <mat-card-subtitle>trabajamos para satisfacer los requerimientos de</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-      trabajamos para satisfacer los requerimientos de
-      <strong>consultoría</strong>,
-      <strong>capacitación</strong>,
-      <strong>selección</strong> y
-      <strong>soporte al recurso humano</strong>.
   </mat-card-content>
-  <img  src="assets/img/ourTeam.png" alt="Nuestro equipo" width="80%">
+  <img  src="assets/img/ourTeam.png" alt="Nuestro equipo" width="95%">
   <mat-card-actions>
     <a mat-raised-button routerLink="about">Conoce más</a>
   </mat-card-actions>
 </mat-card>
 
-<mat-divider></mat-divider>
+<div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap=".25%"
+			fxLayoutGap.lt-md="10px">
+	<mat-card *ngFor="let area of areas" fxFlex="1 1 33%" fxFlex.lt-md="1 1 auto">
+	  <mat-card-header>
+			<mat-card-title>{{area.nombre}}</mat-card-title>
+		</mat-card-header>
+	  <mat-card-content>
+			{{area.descripcion}}
+	  </mat-card-content>
+	</mat-card>
+</div>
 
 <!--
 SOLUTIONS
