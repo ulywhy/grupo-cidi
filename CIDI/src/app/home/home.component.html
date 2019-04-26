@@ -29,7 +29,7 @@ SOLUTIONS
     SPONSORS!
     -->
     <div fxLayout="row wrap" fxLayout.lt-sm="column">
-      <div fxFlex="1 1 auto" *ngFor="let sponsor of sponsors">
+      <div fxFlex="1 1 auto" *ngFor="let sponsor of company.sponsors">
         <img src="{{sponsor.path}}" alt="{{sponsor.label}}"
              width="100" height="70">
        </div>
@@ -46,15 +46,22 @@ AREAS
 !-->
 <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap=".25%"
 fxLayoutGap.lt-md="10px" fxFlexOffset="20px">
-<mat-card *ngFor="let area of areas" fxFlex="1 1 33%" fxFlex.lt-md="1 1 auto">
-	<mat-card-header>
-		<mat-card-title>{{area.nombre}}</mat-card-title>
-	</mat-card-header>
-	<mat-card-content>
-		{{area.descripcion}}
-	</mat-card-content>
-	<button mat-button>conoce más</button>
-</mat-card>
+	<!-- SECTION TITLE !-->
+	<mat-toolbar fxFlex="none" color="primary" fxLayout="row" fxLayoutGap="10px">
+			<span> Nuestros Servicios </span>
+	</mat-toolbar>
+
+	<!-- SECTION CONTENT !-->
+	<mat-card *ngFor="let solution of company.solutions" fxFlex="1 1 33%" fxFlex.lt-md="1 1 auto">
+		<mat-card-header>
+			<mat-card-title>{{solution.name}}</mat-card-title>
+		</mat-card-header>
+		<img  src="assets/img/{{solution.image.name}}" alt="{{solution.image.alt}}" width="95%">
+	  <mat-card-content>
+			{{solution.description}}
+		</mat-card-content>
+		<a mat-button color="accent" [routerLink]="['/solution', solution.name]">conoce más</a>
+	</mat-card>
 </div>
 
 </div>

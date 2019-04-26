@@ -26,7 +26,7 @@ import {MatTableModule} from '@angular/material/table';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { SolutionsComponent } from './solutions/solutions.component';
-import { MoreOnServiceComponent } from './more-on-service/more-on-service.component';
+import { MoreOnSolutionComponent } from './more-on-solution/more-on-solution.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,7 @@ import { MoreOnServiceComponent } from './more-on-service/more-on-service.compon
     AboutComponent,
     HomeComponent,
     SolutionsComponent,
-    MoreOnServiceComponent
+    MoreOnSolutionComponent
   ],
   imports: [
     BrowserModule,

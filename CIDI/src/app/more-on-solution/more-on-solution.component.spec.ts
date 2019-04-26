@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MoreOnServiceComponent } from './more-on-service.component';
+import { MoreOnSolutionComponent } from './more-on-solution.component';
 
-describe('MoreOnServiceComponent', () => {
-  let component: MoreOnServiceComponent;
-  let fixture: ComponentFixture<MoreOnServiceComponent>;
+describe('MoreOnSolutionComponent', () => {
+  let component: MoreOnSolutionComponent;
+  let fixture: ComponentFixture<MoreOnSolutionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MoreOnServiceComponent ]
+      declarations: [ MoreOnSolutionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MoreOnServiceComponent);
+    fixture = TestBed.createComponent(MoreOnSolutionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
