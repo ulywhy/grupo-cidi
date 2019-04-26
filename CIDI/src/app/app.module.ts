@@ -43,7 +43,6 @@ import { MoreOnServiceComponent } from './more-on-service/more-on-service.compon
     BrowserAnimationsModule,
     FlexLayoutModule,
     //material modules
-    MatSidenavModule,
     MatCardModule,
     MatToolbarModule,
     MatGridListModule,
@@ -51,7 +50,8 @@ import { MoreOnServiceComponent } from './more-on-service/more-on-service.compon
     MatDividerModule,
     MatListModule,
     MatIconModule,
-		MatTableModule
+		MatTableModule,
+		MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

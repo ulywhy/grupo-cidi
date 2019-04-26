@@ -1,8 +1,8 @@
 <!--
 ABOUT
 -->
-<div fxLayout="column" fxLayoutGap="10px" align="center">
-<mat-card fxFlex="1 1 auto">
+<div fxLayout="column" align="center">
+<mat-card fxFlex="1 1 auto" fxFlexOffset="20px">
   <mat-card-header>
     <mat-card-title>CONSULTORÍA INTELIGENTE PARA EL DESARROLLO INDUSTRIAL</mat-card-title>
     <mat-card-subtitle>trabajamos para satisfacer los requerimientos de</mat-card-subtitle>
@@ -11,26 +11,15 @@ ABOUT
   </mat-card-content>
   <img  src="assets/img/ourTeam.png" alt="Nuestro equipo" width="95%">
   <mat-card-actions>
-    <a mat-raised-button routerLink="about">Conoce más</a>
+    <a mat-raised-button color="accent" routerLink="about">Conoce más</a>
   </mat-card-actions>
 </mat-card>
 
-<div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap=".25%"
-			fxLayoutGap.lt-md="10px">
-	<mat-card *ngFor="let area of areas" fxFlex="1 1 33%" fxFlex.lt-md="1 1 auto">
-	  <mat-card-header>
-			<mat-card-title>{{area.nombre}}</mat-card-title>
-		</mat-card-header>
-	  <mat-card-content>
-			{{area.descripcion}}
-	  </mat-card-content>
-	</mat-card>
-</div>
 
 <!--
 SOLUTIONS
 -->
-<mat-card fxFlex="1 1 auto" class="example-card">
+<mat-card fxFlex="1 1 auto" class="example-card" fxFlexOffset="20px">
   <mat-card-header>
     <mat-card-title>Soluciones</mat-card-title>
     <mat-card-subtitle>empresas que confían en nosotros</mat-card-subtitle>
@@ -48,7 +37,24 @@ SOLUTIONS
 
   </mat-card-content>
   <mat-card-actions>
-    <a mat-raised-button routerLink="solutions">Conoce más</a>
+    <a mat-raised-button routerLink="solutions" color="accent">Conoce más</a>
   </mat-card-actions>
 </mat-card>
+
+<!--
+AREAS
+!-->
+<div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap=".25%"
+fxLayoutGap.lt-md="10px" fxFlexOffset="20px">
+<mat-card *ngFor="let area of areas" fxFlex="1 1 33%" fxFlex.lt-md="1 1 auto">
+	<mat-card-header>
+		<mat-card-title>{{area.nombre}}</mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		{{area.descripcion}}
+	</mat-card-content>
+	<button mat-button>conoce más</button>
+</mat-card>
+</div>
+
 </div>
