@@ -27,6 +27,8 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { SolutionsComponent } from './solutions/solutions.component';
 import { MoreOnSolutionComponent } from './more-on-solution/more-on-solution.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { MoreOnSolutionComponent } from './more-on-solution/more-on-solution.com
     AboutComponent,
     HomeComponent,
     SolutionsComponent,
-    MoreOnSolutionComponent
+    MoreOnSolutionComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,38 @@
+<mat-toolbar fxFlex="none" fxLayout="column" color="primary" fxLayoutAlign="end">
+	<mat-toolbar-row>
+		<p class="mat-body-2">  {{company.name}}  </p>
+	</mat-toolbar-row>
+	<mat-toolbar-row fxLayout="row wrap" fxLayoutGap="10px"  #Contactos>
+		<a fxFlex mat-icon-button href="{{company.facebook.link}}">
+			<i class="fab fa-facebook-square fa-lg" aria-label="Facebook"></i>
+			{{company.facebook.page}}
+		</a>
+		<a fxFlex mat-icon-button href="mailto:{{company.email.address}}?{{company.email.header}}">
+			<i class="fas fa-envelope fa-lg" aria-label="email"></i>
+			{{company.email.address}}
+		</a>
+		<span fxFlex="4 4 auto" fxFlex.lt-md="shrink"></span>
+	</mat-toolbar-row>
+
+	<mat-toolbar-row fxLayout="row wrap" fxLayoutGap="10px">
+		<a *ngFor="let phone of company.phones" mat-button color="white" href="tel:{{phone}}" class="mat-body-1">{{phone}}</a>
+		<span fxFlex="4 4 auto" fxFlex.lt-md="shrink"></span>
+	</mat-toolbar-row>
+	<mat-toolbar-row>
+		<span fxFlex="2 2 auto"></span>
+		<p class="mat-caption">{{company.address}}</p>
+		<span fxFlex="2 2 auto"></span>
+	</mat-toolbar-row>
+	<mat-toolbar-row fxLayoutGap="2px">
+		<span fxFlex="2 2 auto"></span>
+		<span class="mat-caption">
+			designed by </span>
+		<span fxHide.lt-sm="true" class="mat-caption">
+			Ulises Rodrigo Gonzalez Osnaya,
+		</span>
+		<span class="mat-caption">
+			ulywhy@gmail.com
+		</span>
+		<span fxFlex="2 2 auto"></span>
+	</mat-toolbar-row>
+</mat-toolbar>

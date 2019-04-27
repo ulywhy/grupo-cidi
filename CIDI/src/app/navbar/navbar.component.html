@@ -1,0 +1,23 @@
+<mat-toolbar fxFlex="none" color="primary" fxLayout="row" fxLayoutGap="10px" class="toolbar">
+
+	<!-- WEB !-->
+	<div fxShow="true" fxShow.lt-md="false" fxLayoutGap="10px" fxFlex>
+		<button mat-button routerLink="" color="white">
+			{{company.name}}
+		</button>
+		<span fxFlex="1 1 auto"></span>
+			<button mat-stroked-button color="white">servicios</button>
+			<button mat-stroked-button color="white" (click)="scroll(Contactos)">contacto</button>
+	</div>
+
+	<!--MOBILE !-->
+	<div fxShow="false" fxShow.lt-md="true" fxLayoutGap="10px" fxFlex>
+		<button mat-icon-button (click)="sidenav.toggle()">
+			<mat-icon>menu</mat-icon>
+		</button>
+		<span fxFlex="1 1 auto"></span>
+		<button mat-button routerLink="" color="white">
+			<i class="fas fa-home fa-2x" color="white"></i>
+		</button>
+	</div>
+</mat-toolbar>
