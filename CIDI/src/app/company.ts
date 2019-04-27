@@ -5,6 +5,9 @@ export class Company {
 	facebook;
 	email;
 	phones = [];
+	values = [];
+	mission;
+	vision;
 	solutions = [];
 	sponsors = [];
 
@@ -13,7 +16,10 @@ export class Company {
 		this.name = "Grupo CIDI";
 
 		//LOCATION
-		this.address = "Av. Adolfo Lopéz Mateos #9 int 5, Barrio San Martín, Tepotzotlán, Estado de México.";
+		this.address = {
+			value: "Av. Adolfo Lopéz Mateos #9 int 5, Barrio San Martín, Tepotzotlán, Estado de México.",
+			mapsURL: "https://www.google.com/maps/search/?api=1&query=19.714793, -99.224068"
+		}
 
 		//SOCIAL NETWORKS
 		this.facebook = {
@@ -31,6 +37,16 @@ export class Company {
 			"015552064028",
 			"015553935177",
 			"015558767046"
+		];
+
+		this.mission = "esta es mi mision";
+
+		this.vision = "esta es mi vision";
+
+		this.values = [
+			"valor 1",
+			"valor 2",
+			"valor 3"
 		];
 
 		//SOLUTIONS

@@ -28,15 +28,9 @@ export class AppComponent implements OnDestroy, OnInit {
 
 	ngOnInit(){
 		this.companyService.getCompany().subscribe(company => this.company = company);
-		console.log(this.company);
 	}
 
 	ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
-
-	scroll(el){
-		console.log(el)
-		el.scrollIntoView({behavior: "smooth"});
-	}
 }

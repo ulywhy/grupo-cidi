@@ -20,6 +20,10 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
+import {FormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
 
 
 //CUSTOM COMPONENTS
@@ -29,6 +33,7 @@ import { SolutionsComponent } from './solutions/solutions.component';
 import { MoreOnSolutionComponent } from './more-on-solution/more-on-solution.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,8 @@ import { FooterComponent } from './footer/footer.component';
     SolutionsComponent,
     MoreOnSolutionComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +52,7 @@ import { FooterComponent } from './footer/footer.component';
     //material core
     BrowserAnimationsModule,
     FlexLayoutModule,
+		FormsModule,
     //material modules
     MatCardModule,
     MatToolbarModule,
@@ -55,7 +62,10 @@ import { FooterComponent } from './footer/footer.component';
     MatListModule,
     MatIconModule,
 		MatTableModule,
-		MatSidenavModule
+		MatSidenavModule,
+		MatFormFieldModule,
+		MatSelectModule,
+		MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
