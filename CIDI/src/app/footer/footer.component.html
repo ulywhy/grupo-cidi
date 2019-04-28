@@ -1,33 +1,45 @@
-<mat-toolbar fxFlex="none" fxLayout="column" color="primary" fxLayoutAlign="end">
-	<mat-toolbar-row>
-		<span fxFlex="4 4 auto" fxFlex.lt-md="shrink"></span>
-		<p class="display-2">  {{company.name}}  </p>
-		<span fxFlex="4 4 auto" fxFlex.lt-md="shrink"></span>
-	</mat-toolbar-row>
-	<mat-toolbar-row fxLayout="row wrap" fxLayoutGap="10px"  #Contactos>
-		<span fxFlex="4 4 auto" fxFlex.lt-md="shrink"></span>
-		<a fxFlex mat-button href="{{company.facebook.link}}">
+<div fxLayout="column" fxLayoutAlign="end">
+<mat-toolbar fxFlex="none" fxLayout="row" color="accent">
+	<span fxFlex="1 1 auto" fxFlex.lt-md="shrink"></span>
+	<a routerLink="" class="display-4" style="color: white; text-decoration: none;">
+			{{company.name}}
+	</a>
+	<span fxFlex="1 1 auto" fxFlex.lt-md="shrink"></span>
+</mat-toolbar>
+<mat-toolbar fxFlex="none" fxLayout="column" color="primary">
+	<mat-toolbar-row fxLayout="row" fxLayoutGap="10px"  #Contactos>
+		<span fxFlex="1 1 auto" fxFlex.lt-md="shrink"></span>
+		<a fxFlex class="mat-caption"
+		 		href="{{company.facebook.link}}">
 			<i class="fab fa-facebook-square fa-lg" aria-label="Facebook"></i>
 			{{company.facebook.page}}
 		</a>
-		<a fxFlex mat-button href="mailto:{{company.email.address}}?{{company.email.header}}">
+		<a fxFlex class="mat-caption"
+		 	 href="mailto:{{company.email.address}}?{{company.email.header}}">
 			<i class="fas fa-envelope fa-lg" aria-label="email"></i>
 			{{company.email.address}}
 		</a>
-		<span fxFlex="4 4 auto" fxFlex.lt-md="shrink"></span>
+		<a fxFlex class="mat-caption"
+		 		href="{{company.linkedin.link}}">
+			<i class="fab fa-linkedin fa-lg"></i>
+			{{company.linkedin.page}}
+		</a>
+		<span fxFlex="1 1 auto" fxFlex.lt-md="shrink"></span>
 	</mat-toolbar-row>
 
 	<mat-toolbar-row fxLayout="row wrap" fxLayoutGap="10px">
-		<span fxFlex="4 4 auto" fxFlex.lt-md="shrink"></span>
-		<a *ngFor="let phone of company.phones" mat-button color="white" href="tel:{{phone}}" class="mat-body-1">
+		<span fxFlex="1 1 auto" fxFlex.lt-md="shrink"></span>
+		<a *ngFor="let phone of company.phones"
+			 	class="mat-caption"
+		 		href="tel:{{phone}}">
 			<i class="fas fa-phone"></i>
 			{{phone}}
 		</a>
-		<span fxFlex="4 4 auto" fxFlex.lt-md="shrink"></span>
+		<span fxFlex="1 1 auto" fxFlex.lt-md="shrink"></span>
 	</mat-toolbar-row>
 	<mat-toolbar-row>
 		<span fxFlex="2 2 auto"></span>
-		<a class="mat-caption" mat-button color="white" href="{{company.address.mapsURL}}">
+		<a class="mat-caption"   href="{{company.address.mapsURL}}">
 			<i class="fas fa-map-marked-alt"></i>
 			{{company.address.value}}
 		</a>
@@ -46,3 +58,4 @@
 		<span fxFlex="2 2 auto"></span>
 	</mat-toolbar-row>
 </mat-toolbar>
+</div>

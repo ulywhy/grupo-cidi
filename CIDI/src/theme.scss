@@ -1,4 +1,7 @@
 @import '~@angular/material/theming';
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
+
+//palettes
 
 $bluepalette: (
     50 : #e0e7f8,
@@ -69,8 +72,17 @@ $redpalette: (
 $my-theme-primary: mat-palette($bluepalette);
 $my-theme-accent : mat-palette($redpalette);
 $my-theme-warn   : mat-palette($mat-lime);
+
 $my-theme: mat-light-theme(
-    $my-theme-primary,
+		$my-theme-primary,
 		$my-theme-accent,
     $my-theme-warn
+);
+
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat-typography-config(
+  $font-family: 'Source Serif Pro, serif',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
 );

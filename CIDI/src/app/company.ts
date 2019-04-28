@@ -2,8 +2,10 @@ export class Company {
 
 	name;
 	address;
+	logo;
 	facebook;
 	email;
+	linkedin;
 	phones = [];
 	values = [];
 	mission;
@@ -21,6 +23,12 @@ export class Company {
 			mapsURL: "https://www.google.com/maps/search/?api=1&query=19.714793, -99.224068"
 		}
 
+		//LOGO
+		this.logo = {
+			name: "logo.png",
+			alt: "our logo"
+		},
+
 		//SOCIAL NETWORKS
 		this.facebook = {
 			link: "https://www.facebook.com/GrupoCidiSolucionesEfectivas/",
@@ -30,6 +38,11 @@ export class Company {
 		this.email = {
 			address: "ventas_1@grupocidi.com",
 			header: "Subject=Hello%20User"
+		};
+
+		this.linkedin = {
+			link: "https://mx.linkedin.com/in/grupo-cidi-consultor%C3%ADa-inteligente-a938194b",
+			page: "/company/grupo-cidi",
 		};
 
 		this.phones = [
