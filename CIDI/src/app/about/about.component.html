@@ -1,68 +1,56 @@
-<div fxLayout='row'>
-  <div fxLayout='column'>
+<div fxLayout='column'>
 
-    <div fxFlex="auto">
-      <mat-card>
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>¿Quiénes somos?</mat-card-title>
-          <mat-card-subtitle>Brindamos soluciones efectivas</mat-card-subtitle>
-          <img mat-card-image width="80" height="150"
-                src="assets/img/consultoria.jpeg" alt="Nuestro equipo">
-          </mat-card-header>
-        <mat-card-content>
-          <p>
-            GRUPO CIDI tiene sus orígenes como un pequeño despacho que inicialmente
-            se dedicaba a los servicios de reclutamiento y selección de personal.
-            En 1997 sus fundadores deciden nombrarlo CONSULTORÍA INTELIGENTE PARA EL DESARROLLO INDUSTRIAL y es a partir de este año que GRUPO CIDI inicia actividades con un portafolio de servicios ampliado y diseñado para satisfacer los requerimientos de CONSULTORÍA, CAPACITACIÓN, SELECCIÓN Y SOPORTE AL RECURSO HUMANO.
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </div>
+	<mat-tab-group>
+		<mat-tab>
+			<ng-template mat-tab-label>
+				Nosotros
+			</ng-template>
+			<mat-card>
+				<mat-card-header>
+					<mat-card-title>¿Quiénes somos?</mat-card-title>
+					<mat-card-subtitle>Brindamos soluciones efectivas</mat-card-subtitle>
 
-  <!--ROW!-->
+				</mat-card-header>
+				<mat-card-content>
+					<p>
+						GRUPO CIDI tiene sus orígenes como un pequeño despacho que inicialmente
+						se dedicaba a los servicios de reclutamiento y selección de personal.
+						En 1997 sus fundadores deciden nombrarlo CONSULTORÍA INTELIGENTE PARA EL DESARROLLO INDUSTRIAL y es a partir de este año que GRUPO CIDI inicia actividades con un portafolio de servicios ampliado y diseñado para satisfacer los requerimientos de CONSULTORÍA, CAPACITACIÓN, SELECCIÓN Y SOPORTE AL RECURSO HUMANO.
+					</p>
 
-    <div fxFlex="auto">
-
-      <mat-card>
-          <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>
-              Resultados
-            </mat-card-title>
-            <mat-card-subtitle>
-              Asumimos con responsabilidad nuestros compromisos y los concentramos en esta MISIÓN:
-              ¡QUEREMOS SER EL SOPORTE DE SU ÉXITO¡
-            </mat-card-subtitle>
-            <img mat-card-image width="80" height="150"
-                  src="assets/img/consultoria.jpeg" alt="Nuestro equipo">
-          </mat-card-header>
-          <mat-card-content>
-            En un entorno tan dinámico es necesario contar con lo mejor en soluciones de consultoría.
-
-            Permitanos darle a conocer la gama de servicios que pueden radicalmente alinear el rumbo de su organización.
-
-            Nuestra razón de ser se basa, en el interés de ofrecer a nuestros clientes, empleados y socios, soluciones efectivas. A través del desarrollo de programas contundentes que impacten en la productividad, la calidad, la capacitación y el recurso humano, elevando así el nivel competitivo de nuestros clientes y nuestra gente.
-
-        </mat-card-content>
-      </mat-card>
-    </div>
-  </div>
-
-
-    <div fxHide.lt-sm="true" fxFlex="grow">
-      <mat-card class="example-card">
-        <mat-card-content>
-          <mat-list>
-            <h3 mat-subheader>Valores</h3>
-            <mat-list-item *ngFor="let value of values">
-              <mat-icon mat-list-icon>stars</mat-icon>
-              <h4 mat-line>{{value}}</h4>
-            </mat-list-item>
-          </mat-list>
-        </mat-card-content>
-      </mat-card>
-    </div>
-
-
+				</mat-card-content>
+			</mat-card>
+		</mat-tab>
+		<mat-tab>
+			<ng-template mat-tab-label>
+				Misión
+			</ng-template>
+			<mat-card>
+				<mat-card-header>
+					<mat-card-title>
+					</mat-card-title>
+				</mat-card-header>
+				<mat-card-content>
+					{{company.mission}}
+				</mat-card-content>
+			</mat-card>
+		</mat-tab>
+		<mat-tab>
+			<ng-template mat-tab-label>
+				Visión
+			</ng-template>
+			{{company.vision}}
+		</mat-tab>
+		<mat-tab>
+			<ng-template mat-tab-label>
+				Valores
+			</ng-template>
+			<mat-list>
+				<mat-list-item *ngFor="let value of company.values">
+					<mat-icon mat-list-icon>stars</mat-icon>
+					<h4 mat-line>{{value.name}}: {{value.definition}}</h4>
+				</mat-list-item>
+			</mat-list>
+		</mat-tab>
+	</mat-tab-group>
 </div>

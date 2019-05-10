@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { CompanyService } from '.././company.service';
 import { Company } from '.././company';
@@ -10,6 +10,8 @@ import { Company } from '.././company';
 })
 export class MoreOnSolutionComponent implements OnInit {
 
+	@Input() solutionView = null;
+
 	solution;
 
 	constructor(
@@ -19,12 +21,15 @@ export class MoreOnSolutionComponent implements OnInit {
 	){}
 
 	ngOnInit() {
-	  let solutionName = this.route.snapshot.paramMap.get('name');
+	  if(this.solutionView === null){
+			let solutionName = this.route.snapshot.paramMap.get('name');
 
-	  this.companyService.getCompany().subscribe(company => {
-		console.log(company.solutions);
-			this.solution = company.solutions.find( solution => solutionName == solution.name);
-		});
+		  this.companyService.getCompany().subscribe(company => {
+				this.solution = company.solutions.find( solution => solutionName == solution.name);
+			});
+		}else{
+			this.solution = this.solutionView;
+		}
 	}
 
 }

@@ -3,13 +3,11 @@ export class Company {
 	name;
 	address;
 	logo;
-	facebook;
-	email;
-	linkedin;
-	phones = [];
-	values = [];
 	mission;
 	vision;
+	values = [];
+	socialNet = [];
+	phones = [];
 	solutions = [];
 	sponsors = [];
 
@@ -21,29 +19,66 @@ export class Company {
 		this.address = {
 			value: "Av. Adolfo Lopéz Mateos #9 int 5, Barrio San Martín, Tepotzotlán, Estado de México.",
 			mapsURL: "https://www.google.com/maps/search/?api=1&query=19.714793, -99.224068"
-		}
+		};
 
 		//LOGO
 		this.logo = {
 			name: "logo.png",
 			alt: "our logo"
-		},
+		};
+
+		this.mission = "Nuestra razón de ser se basa, en el interés de ofrecer a nuestros clientes, empleados y socios, soluciones efectivas. A través del desarrollo de programas contundentes que impacten en la productividad, la calidad, la capacitación y el recurso humano, elevando así el nivel competitivo de nuestros clientes y nuestra gente.";
+
+		this.vision = "esta es mi vision";
+
+		this.values = [
+			{
+				name: "Honestidad",
+				definition: ""
+			},
+			{
+				name: " Confianza",
+				definition: ""
+			},
+			{
+				name: "Calidad",
+				definition: ""
+			},
+			{
+				name: "Garantía",
+				definition: ""
+			},
+			{
+				name: "Profesionalismo",
+				definition: ""
+			},
+			{
+				name: "Seriedad",
+				definition: ""
+			}
+		];
 
 		//SOCIAL NETWORKS
-		this.facebook = {
-			link: "https://www.facebook.com/GrupoCidiSolucionesEfectivas/",
-			page: "/grupo CIDI"
-		};
-
-		this.email = {
-			address: "ventas_1@grupocidi.com",
-			header: "Subject=Hello%20User"
-		};
-
-		this.linkedin = {
-			link: "https://mx.linkedin.com/in/grupo-cidi-consultor%C3%ADa-inteligente-a938194b",
-			page: "/company/grupo-cidi",
-		};
+		this.socialNet = [
+			{
+				//facebook
+				link: "https://www.facebook.com/GrupoCidiSolucionesEfectivas/",
+				page: "/grupo CIDI",
+				icon: "fab fa-facebook-square fa-lg"
+			},
+			{
+				//email
+				link: "mailto:ventas_1@grupocidi.com?Subject=Hello%20User",
+				page: "ventas_1@grupocidi.com",
+				icon: "fas fa-envelope fa-lg"
+			},
+			{
+				//linkedin
+				link: "https://mx.linkedin.com/in/grupo-cidi-consultor%C3%ADa-inteligente-a938194b",
+				page: "/company/grupo-cidi",
+				icon: "fab fa-linkedin fa-lg"
+			}
+		];
 
 		this.phones = [
 			"015558768246",
@@ -52,15 +87,6 @@ export class Company {
 			"015558767046"
 		];
 
-		this.mission = "esta es mi mision";
-
-		this.vision = "esta es mi vision";
-
-		this.values = [
-			"valor 1",
-			"valor 2",
-			"valor 3"
-		];
 
 		//SOLUTIONS
 		this.solutions = [

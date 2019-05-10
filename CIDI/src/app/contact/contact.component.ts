@@ -21,7 +21,6 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
 		this.companyService.getCompany().subscribe(company => this.company = company);
-		console.log(this.company.solutions)
   }
 
 }

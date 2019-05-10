@@ -9,7 +9,7 @@ import { MoreOnSolutionComponent } from './more-on-solution/more-on-solution.com
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
-	{ path: 'solution/:name', component: MoreOnSolutionComponent },
+	{ path: 'solutions/:name', component: MoreOnSolutionComponent },
 	{ path: 'contact', component: ContactComponent },
   { path: 'solutions', component: SolutionsComponent },
   { path: '', component: HomeComponent },

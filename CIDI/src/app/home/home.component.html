@@ -2,7 +2,7 @@
 ABOUT
 -->
 <div fxLayout="column" align="center">
-<mat-card fxFlex="1 1 auto">
+<mat-card fxFlex>
 	<div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="center center">
 		<img  src="assets/img/{{company.logo.name}}" alt="{{company.logo.alt}}">
     <h1 class="display-1">Brindamos Soluciones Efectivas</h1>
@@ -19,7 +19,7 @@ ABOUT
 <!--
 SOLUTIONS
 -->
-<mat-card fxFlex="1 1 auto" class="example-card">
+<mat-card>
   <mat-card-header>
     <mat-card-title>Empresas que confían en nosotros</mat-card-title>
   </mat-card-header>
@@ -59,7 +59,7 @@ fxLayoutGap.lt-md="10px">
 	  <mat-card-content>
 			{{solution.description}}
 		</mat-card-content>
-		<a mat-button color="accent" [routerLink]="['/solution', solution.name]">conoce más</a>
+		<a mat-button color="accent" [routerLink]="['/solutions', solution.name]">conoce más</a>
 	</mat-card>
 </div>
 

@@ -71,7 +71,7 @@ $redpalette: (
 
 $my-theme-primary: mat-palette($bluepalette);
 $my-theme-accent : mat-palette($redpalette);
-$my-theme-warn   : mat-palette($mat-lime);
+$my-theme-warn   : mat-palette($redpalette);
 
 $my-theme: mat-light-theme(
 		$my-theme-primary,

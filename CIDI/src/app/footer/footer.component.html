@@ -1,61 +1,53 @@
 <div fxLayout="column" fxLayoutAlign="end">
-<mat-toolbar fxFlex="none" fxLayout="row" color="accent">
-	<span fxFlex="1 1 auto" fxFlex.lt-md="shrink"></span>
-	<a routerLink="" class="display-4" style="color: white; text-decoration: none;">
-			{{company.name}}
-	</a>
-	<span fxFlex="1 1 auto" fxFlex.lt-md="shrink"></span>
-</mat-toolbar>
-<mat-toolbar fxFlex="none" fxLayout="column" color="primary">
-	<mat-toolbar-row fxLayout="row" fxLayoutGap="10px"  #Contactos>
-		<span fxFlex="1 1 auto" fxFlex.lt-md="shrink"></span>
-		<a fxFlex class="mat-caption"
-		 		href="{{company.facebook.link}}">
-			<i class="fab fa-facebook-square fa-lg" aria-label="Facebook"></i>
-			{{company.facebook.page}}
+	<!--HEADER !-->
+	<mat-toolbar fxLayout="row" color="accent" fxLayoutAlign="center center">
+		<a routerLink="" class="display-4" style="color: white; text-decoration: none;">
+				{{company.name}}
 		</a>
-		<a fxFlex class="mat-caption"
-		 	 href="mailto:{{company.email.address}}?{{company.email.header}}">
-			<i class="fas fa-envelope fa-lg" aria-label="email"></i>
-			{{company.email.address}}
-		</a>
-		<a fxFlex class="mat-caption"
-		 		href="{{company.linkedin.link}}">
-			<i class="fab fa-linkedin fa-lg"></i>
-			{{company.linkedin.page}}
-		</a>
-		<span fxFlex="1 1 auto" fxFlex.lt-md="shrink"></span>
-	</mat-toolbar-row>
+	</mat-toolbar>
 
-	<mat-toolbar-row fxLayout="row wrap" fxLayoutGap="10px">
-		<span fxFlex="1 1 auto" fxFlex.lt-md="shrink"></span>
-		<a *ngFor="let phone of company.phones"
-			 	class="mat-caption"
-		 		href="tel:{{phone}}">
-			<i class="fas fa-phone"></i>
-			{{phone}}
-		</a>
-		<span fxFlex="1 1 auto" fxFlex.lt-md="shrink"></span>
-	</mat-toolbar-row>
-	<mat-toolbar-row>
-		<span fxFlex="2 2 auto"></span>
-		<a class="mat-caption"   href="{{company.address.mapsURL}}">
-			<i class="fas fa-map-marked-alt"></i>
-			{{company.address.value}}
-		</a>
-		<span fxFlex="2 2 auto"></span>
-	</mat-toolbar-row>
-	<mat-toolbar-row fxLayoutGap="2px">
-		<span fxFlex="2 2 auto"></span>
-		<span class="mat-caption">
-			designed by </span>
-		<span fxHide.lt-sm="true" class="mat-caption">
-			Ulises Rodrigo Gonzalez Osnaya,
-		</span>
-		<span class="mat-caption">
-			ulywhy@gmail.com
-		</span>
-		<span fxFlex="2 2 auto"></span>
-	</mat-toolbar-row>
-</mat-toolbar>
+	<mat-toolbar fxLayout="column" color="primary">
+
+		<!--SOCIAL NETWORKS !-->
+		<mat-toolbar-row fxLayout="row" fxLayoutGap="10px" fxFlexAlign="center">
+			<a fxFlex="auto" *ngFor="let social of company.socialNet"
+					class="mat-caption"
+					href="{{social.link}}">
+				<i class="{{social.icon}}"></i>
+				<span fxShow="true" fxShow.sm="false" fxShow.lt-sm="false">{{social.page}}</span>
+			</a>
+		</mat-toolbar-row>
+		<!-- PHONES !-->
+		<mat-toolbar-row fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="center center">
+			<span *ngFor="let phone of company.phones">
+				<a class="mat-caption"
+						href="tel:{{phone}}">
+					<i class="fas fa-phone"></i>
+					{{phone}}
+				</a>
+			</span>
+		</mat-toolbar-row>
+		<!--ADDRESS !-->
+		<mat-toolbar-row fxLayoutAlign="center center">
+			<a style=" white-space: nowrap;
+  								overflow: hidden;
+  								text-overflow: ellipsis;"
+					class="mat-caption" href="{{company.address.mapsURL}}">
+				<i class="fas fa-map-marked-alt"></i>
+				{{company.address.value}}
+			</a>
+		</mat-toolbar-row>
+
+		<!-- DESIGNER !-->
+		<mat-toolbar-row fxLayoutGap="2px" fxLayoutAlign="center center">
+			<span class="mat-caption">
+				designed by </span>
+			<span fxHide.lt-sm="true" class="mat-caption">
+				Ulises Rodrigo Gonzalez Osnaya,
+			</span>
+			<span class="mat-caption">
+				ulywhy@gmail.com
+			</span>
+		</mat-toolbar-row>
+	</mat-toolbar>
 </div>
