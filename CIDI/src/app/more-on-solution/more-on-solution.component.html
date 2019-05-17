@@ -1,16 +1,16 @@
 <!--
 AREAS
 !-->
-<div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap=".25%"
-fxLayoutGap.lt-md="10px">
 
-	<!-- SECTION CONTENT !-->
-	<mat-card *ngFor="let service of solution.services" fxFlex="1 1 33%" fxFlex.lt-md="1 1 auto">
+<!-- SECTION CONTENT !-->
+<div fxLayout="row wrap" fxLayoutGap.lt-md="10px">
+
+	<mat-card  *ngFor="let program of solution.menu" fxFlex="1 1 33%" fxFlex.lt-md="1 1 auto">
 		<mat-card-header>
-			<mat-card-title>{{service.name}}</mat-card-title>
+			<mat-card-title>{{program.name}}</mat-card-title>
 		</mat-card-header>
 		<mat-card-content>
-			{{service.description}}
+			{{program.objective}}
 		</mat-card-content>
 	</mat-card>
 </div>
