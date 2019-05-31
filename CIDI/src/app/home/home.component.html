@@ -9,7 +9,7 @@ ABOUT
   </div>
 	<mat-card-content>
   </mat-card-content>
-  <img  src="assets/img/ourTeam.png" alt="Nuestro equipo" width="95%">
+  <img  src="assets/img/ourTeam.jpeg" alt="Nuestro equipo" width="95%">
   <mat-card-actions>
     <a mat-raised-button color="accent" routerLink="about">Conoce más</a>
   </mat-card-actions>
@@ -43,23 +43,27 @@ SOLUTIONS
 <!--
 AREAS
 !-->
-<div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutGap=".25%"
-fxLayoutGap.lt-md="10px">
-	<!-- SECTION TITLE !-->
-	<mat-toolbar fxFlex="none" color="accent" fxLayout="row" fxLayoutGap="10px">
-			<span> Nuestros Servicios </span>
-	</mat-toolbar>
+<!-- SECTION TITLE !-->
+<mat-toolbar fxFlex="none" color="accent" fxLayout="row" fxLayoutGap="10px">
+		<span> Nuestros Servicios </span>
+</mat-toolbar>
 
+<div fxLayout="row wrap" fxLayoutAlign="space-evenly"
+fxLayout.lt-md="column">
 	<!-- SECTION CONTENT !-->
-	<mat-card *ngFor="let solution of company.solutions" fxFlex="1 1 33%" fxFlex.lt-md="1 1 auto">
-		<mat-card-header>
+	<mat-card *ngFor="let solution of company.solutions"
+	 fxFlex="auto"
+	 fxFlex="1 1 30%" fxFlex.md="1 1 45%" fxFlex.lt-md="1 1 auto">
+		<mat-card-header fxFlexAlign="center start">
 			<mat-card-title>{{solution.name}}</mat-card-title>
 		</mat-card-header>
-		<img  src="assets/img/{{solution.image.name}}" alt="{{solution.image.alt}}" width="95%">
-	  <mat-card-content>
+		<img mat-card-image src="assets/img/{{solution.image.name}}" alt="{{solution.image.alt}}" width="95%">
+	  <mat-card-content fxFlexAlign="center center" fxLayout="column" fxLayoutAlign="space-evenly">
 			{{solution.description}}
 		</mat-card-content>
-		<a mat-button color="accent" [routerLink]="['/solutions', solution.name]">conoce más</a>
+		<mat-card-actions fxFlexAlign="center end">
+			<a mat-button color="accent" [routerLink]="['/solutions', solution.name]">conoce más</a>
+		</mat-card-actions>
 	</mat-card>
 </div>
 

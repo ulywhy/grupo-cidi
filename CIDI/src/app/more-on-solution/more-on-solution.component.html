@@ -3,14 +3,34 @@ AREAS
 !-->
 
 <!-- SECTION CONTENT !-->
-<div fxLayout="row wrap" fxLayoutGap.lt-md="10px">
-
-	<mat-card  *ngFor="let program of solution.menu" fxFlex="1 1 33%" fxFlex.lt-md="1 1 auto">
+<div style="background: gray;">
+	<mat-card>
 		<mat-card-header>
-			<mat-card-title>{{program.name}}</mat-card-title>
+			<mat-card-title>{{solution.menu.introduction}}</mat-card-title>
 		</mat-card-header>
-		<mat-card-content>
-			{{program.objective}}
+
+		<mat-card-content fxLayout="row wrap" fxLayoutAlign="space-evenly">
+			<mat-card  *ngFor="let service of solution.menu.services" fxFlex="1 1 45%" fxFlex.lt-md="1 1 auto">
+				<mat-card-title-group>
+					<img mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+						fxFlexOffset="10px">
+					<mat-card-title>{{service.name}}</mat-card-title>
+					<mat-card-subtitle>{{service.description}}</mat-card-subtitle>
+				</mat-card-title-group>
+
+			  <mat-divider></mat-divider>
+
+				<mat-card-content>
+
+					<mat-list role="list">
+					  <mat-list-item role="listitem"
+							*ngFor="let objective of service.objectives">
+							<mat-icon mat-list-icon>check</mat-icon>
+							<p mat.line>{{objective}}</p>
+						</mat-list-item>
+					</mat-list>
+				</mat-card-content>
+			</mat-card>
 		</mat-card-content>
 	</mat-card>
 </div>

@@ -6,20 +6,18 @@
 				{{company.name}}
 		</a>
 		<span fxFlex></span>
-		<button mat-stroked-button color="white" routerLink="/solutions">soluciones</button>
-		<button mat-stroked-button color="white" routerLink="/contact">contacto</button>
 	</div>
 
 	<!--MOBILE !-->
-	<div *ngIf="mobileQuery.matches" fxLayoutGap="10px">
+	<div *ngIf="mobileQuery.matches" fxLayout="row" fxLayoutGap="10px">
 		<!-- HOME BUTTON !-->
-		<button mat-button routerLink="" color="white">
+		<button mat-button routerLink="" color="white" fxFlex="none">
 			<i class="fas fa-home fa-2x" color="white"></i>
 		</button>
 		<!-- stretcher !-->
-		<span fxFlex="1 1 auto"></span>
+		<span fxFlex="auto 4 4"></span>
 		<!-- MENU BUTTON !-->
-		<button mat-icon-button (click)="sidenav.toggle()">
+		<button mat-icon-button (click)="sidenav.toggle()" fxFlex="none">
 			<mat-icon>menu</mat-icon>
 		</button>
 	</div>

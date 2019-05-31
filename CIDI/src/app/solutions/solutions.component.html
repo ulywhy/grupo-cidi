@@ -1,7 +1,7 @@
 <mat-tab-group>
 	<mat-tab *ngFor="let solution of company.solutions">
 		<ng-template mat-tab-label>
-			{{solution.name}}
+			<h3>{{solution.name}}</h3>
 		</ng-template>
 		<app-more-on-solution [solutionView]="solution">
 		</app-more-on-solution>
