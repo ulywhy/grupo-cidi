@@ -1,6 +1,6 @@
 @import '~@angular/material/theming';
-@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
-
+//@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
 //palettes
 
 $bluepalette: (
@@ -69,9 +69,90 @@ $redpalette: (
     )
 );
 
+/* For use in src/lib/core/theming/_palette.scss */
+$md-accent: (
+    50 : #fce4e4,
+    100 : #f7bbbb,
+    200 : #f18e8e,
+    300 : #eb6161,
+    400 : #e73f3f,
+    500 : #e31d1d,
+    600 : #e01a1a,
+    700 : #dc1515,
+    800 : #d81111,
+    900 : #d00a0a,
+    A100 : #fffbfb,
+    A200 : #ffc8c8,
+    A400 : #ff9595,
+    A700 : #ff7b7b,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-primary: (
+    50 : #e5e9ee,
+    100 : #bdc8d4,
+    200 : #92a4b7,
+    300 : #66809a,
+    400 : #456484,
+    500 : #24496e,
+    600 : #204266,
+    700 : #1b395b,
+    800 : #163151,
+    900 : #0d213f,
+    A100 : #79a9ff,
+    A200 : #4688ff,
+    A400 : #1367ff,
+    A700 : #0059f8,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+$custom-theme-primary: mat-palette($md-primary);
+$custom-theme-accent: mat-palette($md-accent);
+$custom-theme-warn: mat-palette($md-accent);
+
+
 $my-theme-primary: mat-palette($bluepalette);
 $my-theme-accent : mat-palette($redpalette);
 $my-theme-warn   : mat-palette($redpalette);
+
+
+
+$custom-theme: mat-light-theme(
+$my-theme-primary,
+$custom-theme-accent,
+$custom-theme-warn
+);
 
 $my-theme: mat-light-theme(
 		$my-theme-primary,
@@ -82,7 +163,7 @@ $my-theme: mat-light-theme(
 // Define a custom typography config that overrides the font-family as well as the
 // `headlines` and `body-1` levels.
 $custom-typography: mat-typography-config(
-  $font-family: 'Source Serif Pro, serif',
+  $font-family: 'Nunito Sans, sans-serif',
   $headline: mat-typography-level(32px, 48px, 700),
   $body-1: mat-typography-level(16px, 24px, 500)
 );
