@@ -3,34 +3,54 @@ AREAS
 !-->
 
 <!-- SECTION CONTENT !-->
-<div style="background: gray;">
+<div>
 	<mat-card>
-		<mat-card-header>
-			<mat-card-title>{{solution.menu.introduction}}</mat-card-title>
-		</mat-card-header>
+		<div fxLayout="row" fxLayoutAlign="center baseline">
+			<p fxFlex="1 1 60%" class="mat-h2">{{solution.menu.introduction}}</p>
+		</div>
 
-		<mat-card-content fxLayout="row wrap" fxLayoutAlign="space-evenly">
-			<mat-card  *ngFor="let service of solution.menu.services" fxFlex="1 1 45%" fxFlex.lt-md="1 1 auto">
-				<mat-card-title-group>
-					<img mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-						fxFlexOffset="10px">
-					<mat-card-title>{{service.name}}</mat-card-title>
-					<mat-card-subtitle>{{service.description}}</mat-card-subtitle>
-				</mat-card-title-group>
+		<mat-card-content fxLayout="column">
+			<div background-color="red" *ngFor="let service of solution.menu.services" fxFlexOffset="56px"
+				fxLayout="row" fxLayoutAlign="center">
+				<mat-card fxFlex="1 1 70%" fxFlex.md="auto" fxFlex.lt-md="auto">
 
-			  <mat-divider></mat-divider>
+					<!--mat-card-title-group fxHide="false" fxHide.md="true" fxHide.lt-md="true">
+						<img mat-card-lg-image src="assets/img/{{service.image.name}}" alt="{{service.image.alt}}"
+							class="img-rounded" fxFlexOffset="10px">
+						<div fxFlexOffset="15px">
+							<mat-toolbar color="accent" width="60%">
+								<mat-card-title>{{service.name}}</mat-card-title>
+							</mat-toolbar>
+							<br>
+							<mat-card-subtitle>{{service.description}}</mat-card-subtitle>
+						</div>
+					</mat-card-title-group>
+					<!-- MOBILE !-->
+					<mat-card-title-group fxHide="true" fxHide.md="false" fxHide.lt-md="false">
+						<div fxFlexOffset="15px" fxLayout="column">
+							<mat-toolbar color="accent" width="60%">
+								<mat-card-title>{{service.name}}</mat-card-title>
+							</mat-toolbar>
+							<br>
+							<img src="assets/img/{{service.image.name}}" alt="{{service.image.alt}}"
+							class="img-rounded" fxFlexOffset="10px">
+							<br>
+							<mat-card-subtitle>{{service.description}}</mat-card-subtitle>
+						</div>
+					</mat-card-title-group>
 
-				<mat-card-content>
+					<mat-card-content>
 
-					<mat-list role="list">
-					  <mat-list-item role="listitem"
-							*ngFor="let objective of service.objectives">
-							<mat-icon mat-list-icon>check</mat-icon>
-							<p mat.line>{{objective}}</p>
-						</mat-list-item>
-					</mat-list>
-				</mat-card-content>
-			</mat-card>
+						<mat-list dense role="list">
+						  <mat-list-item role="listitem"
+								*ngFor="let objective of service.objectives">
+								<mat-icon mat-list-icon color="primary">check</mat-icon>
+								<p mat.line>{{objective}}</p>
+							</mat-list-item>
+						</mat-list>
+					</mat-card-content>
+				</mat-card>
+			</div>
 		</mat-card-content>
 	</mat-card>
 </div>

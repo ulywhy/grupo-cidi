@@ -9,13 +9,15 @@
 	<mat-toolbar fxLayout="column" color="primary">
 
 		<!--SOCIAL NETWORKS !-->
-		<mat-toolbar-row fxLayout="row" fxLayoutGap="10px" fxFlexAlign="center">
-			<a fxFlex="auto" *ngFor="let social of company.socialNet"
+		<mat-toolbar-row fxLayout="row" fxLayoutGap="10px" fxFlexAlign="center center">
+			<span fxFlex></span>
+			<a *ngFor="let social of company.socialNet"
 					class="mat-caption"
 					href="{{social.link}}">
 				<i class="{{social.icon}}"></i>
-				<span fxShow="true" fxShow.sm="false" fxShow.lt-sm="false">{{social.page}}</span>
+				<span fxShow="true" fxShow.sm="false" fxShow.lt-sm="false">{{" " + social.page}}</span>
 			</a>
+			<span fxFlex></span>
 		</mat-toolbar-row>
 		<!-- PHONES !-->
 		<mat-toolbar-row fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="center center">

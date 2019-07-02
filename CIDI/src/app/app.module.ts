@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import {RouterModule} from '@angular/router';
 
 
 // MATERIAL CORE
@@ -33,6 +33,9 @@ import { MoreOnSolutionComponent } from './more-on-solution/more-on-solution.com
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+
+//MDBootstrap
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -65,6 +68,8 @@ import { ContactComponent } from './contact/contact.component';
 		MatFormFieldModule,
 		MatSelectModule,
 		MatInputModule,
+    //MDBootstrap
+    MDBootstrapModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

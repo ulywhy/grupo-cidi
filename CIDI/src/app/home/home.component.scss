@@ -2,6 +2,14 @@ table {
   width: 100%;
 }
 
+.img-rounded {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  width: 240px;
+  height: 240px
+}
+
 tr.example-detail-row {
   height: 0;
 }

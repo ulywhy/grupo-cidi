@@ -2,18 +2,48 @@
 ABOUT
 -->
 <div fxLayout="column" align="center">
-<mat-card fxFlex>
-	<div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="center center">
-		<img  src="assets/img/{{company.logo.name}}" alt="{{company.logo.alt}}">
+	<!-- BANNER !-->
+	<img src="assets/img/banner.png" width="100%">
+<mat-card fxFlex fxLayout="column">
+	<!--div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="center center">
+		<img src="assets/img/{{company.logo.name}}" alt="{{company.logo.alt}}"
+			width="300px" width.md="200px" width.lt-md="150px">
     <h1 class="display-1">{{company.slogan}}</h1>
-  </div>
+  </div!-->
+	<img src="assets/img/ourTeam.png" alt="Nuestro equipo" width="100%">
 	<mat-card-content>
   </mat-card-content>
-  <img  src="assets/img/ourTeam.jpeg" alt="Nuestro equipo" width="95%">
-  <mat-card-actions>
-    <a mat-raised-button color="accent" routerLink="about">Conoce más</a>
+  <mat-card-actions fxLayout="row" fxFlexAlign="center">
+		<a mat-raised-button color="accent" routerLink="about">Conoce más</a>
   </mat-card-actions>
 </mat-card>
+
+<!--
+	AREAS
+	!-->
+	<!-- SECTION TITLE !-->
+	<mat-toolbar fxFlex="none" color="accent" fxLayout="row" fxLayoutGap="10px">
+		<span> Nuestros Servicios </span>
+	</mat-toolbar>
+
+	<div fxLayout="row wrap" fxLayoutAlign="space-evenly"
+	fxLayout.lt-md="column">
+	<!-- SECTION CONTENT !-->
+	<mat-card *ngFor="let solution of company.solutions"
+		fxFlex="1 1 30%" fxFlex.md="1 1 45%" fxFlex.lt-md="1 1 auto">
+	<mat-card-header fxFlexAlign="center start">
+		<mat-card-title>{{solution.name}}</mat-card-title>
+	</mat-card-header>
+	<img mat-card-image class="img-rounded" src="assets/img/{{solution.image.name}}" alt="{{solution.image.alt}}"
+		[routerLink]="['/solutions', solution.name]">
+	<mat-card-content fxFlexAlign="center center" fxLayout="column" fxLayoutAlign="space-evenly">
+		{{solution.description}}
+	</mat-card-content>
+	<mat-card-actions fxFlexAlign="center end">
+		<a mat-raised-button color="accent" [routerLink]="['/solutions', solution.name]">conoce más</a>
+	</mat-card-actions>
+</mat-card>
+</div>
 
 
 <!--
@@ -39,32 +69,5 @@ SOLUTIONS
     <a mat-raised-button routerLink="solutions" color="accent">Conoce más</a>
   </mat-card-actions>
 </mat-card>
-
-<!--
-AREAS
-!-->
-<!-- SECTION TITLE !-->
-<mat-toolbar fxFlex="none" color="accent" fxLayout="row" fxLayoutGap="10px">
-		<span> Nuestros Servicios </span>
-</mat-toolbar>
-
-<div fxLayout="row wrap" fxLayoutAlign="space-evenly"
-fxLayout.lt-md="column">
-	<!-- SECTION CONTENT !-->
-	<mat-card *ngFor="let solution of company.solutions"
-	 fxFlex="auto"
-	 fxFlex="1 1 30%" fxFlex.md="1 1 45%" fxFlex.lt-md="1 1 auto">
-		<mat-card-header fxFlexAlign="center start">
-			<mat-card-title>{{solution.name}}</mat-card-title>
-		</mat-card-header>
-		<img mat-card-image src="assets/img/{{solution.image.name}}" alt="{{solution.image.alt}}" width="95%">
-	  <mat-card-content fxFlexAlign="center center" fxLayout="column" fxLayoutAlign="space-evenly">
-			{{solution.description}}
-		</mat-card-content>
-		<mat-card-actions fxFlexAlign="center end">
-			<a mat-button color="accent" [routerLink]="['/solutions', solution.name]">conoce más</a>
-		</mat-card-actions>
-	</mat-card>
-</div>
 
 </div>

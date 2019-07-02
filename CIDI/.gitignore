@@ -1,5 +1,19 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+#images
+/assets/*
+/sample-images/*
+/logo-design/*
+
+**.png
+**.svg
+**.jpg
+**.jpeg
+
+/archivo-general
+/logo-design
+/sample-images/*
+
 # compiled output
 /dist
 /tmp

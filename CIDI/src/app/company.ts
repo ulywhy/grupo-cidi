@@ -19,7 +19,7 @@ export class Company {
 		//LOCATION
 		this.address = {
 			value: "Av. Adolfo Lopéz Mateos #9 int 5, Barrio San Martín, Tepotzotlán, Estado de México.",
-			mapsURL: "https://www.google.com/maps/search/?api=1&query=19.714793, -99.224068"
+			mapsURL: "https://www.google.com/maps/place/Grupo+CIDI/@19.6062323,-99.3714246,11z/data=!4m8!1m2!2m1!1sgrupo+cidi!3m4!1s0x85d221b20f467257:0x146e12d84d015653!8m2!3d19.7148749!4d-99.2240521"
 		};
 
 		//LOGO
@@ -28,11 +28,11 @@ export class Company {
 			alt: "our logo"
 		};
 
-		this.mission = "Nuestra razón de ser se basa en el interés de ofrecer a nuestros clientes, empleados y socios, soluciones efectivas. A través del desarrollo de nameas contundentes que impacten en la productividad, la calidad, la capacitación y el recurso humano, elevando así el nivel competitivo de nuestros clientes y nuestra gente.";
+		this.mission = "Nuestra razón de ser se basa en el interés de ofrecer a nuestros clientes, empleados y socios, soluciones efectivas. A través del desarrollo de programas contundentes que impacten en la productividad, la calidad, la capacitación y el recurso humano, elevando así el nivel competitivo de nuestros clientes y nuestra gente.";
 
 		this.vision = "Ser la mejor opción de consultoría por la diversidad, calidad, atención y precio de nuestros servicios, contando con personal altamente capacitado y competitivo";
 
-		this.slogan = "Implementamos Soluciones Efectivas";
+		this.slogan = "IMPLEMENTAMOS SOLUCIONES EFECTIVAS";
 
 		this.values = [
 			{
@@ -66,8 +66,14 @@ export class Company {
 			{
 				//facebook
 				link: "https://www.facebook.com/GrupoCidiSolucionesEfectivas/",
-				page: "/grupo CIDI",
+				page: "/GrupoCidiSolucionesEfectivas",
 				icon: "fab fa-facebook-square fa-lg"
+			},
+			{
+				//email
+				link: "mailto:ventas@grupocidi.com?Subject=Hello%20User",
+				page: "ventas@grupocidi.com",
+				icon: "fas fa-envelope fa-lg"
 			},
 			{
 				//email
@@ -77,7 +83,7 @@ export class Company {
 			},
 			{
 				//linkedin
-				link: "https://mx.linkedin.com/in/grupo-cidi-consultor%C3%ADa-inteligente-a938194b",
+				link: "https://www.linkedin.com/company/grupo-cidi",
 				page: "/company/grupo-cidi",
 				icon: "fab fa-linkedin fa-lg"
 			}
@@ -111,7 +117,7 @@ export class Company {
 					}
 				],
 				menu: {
-					introduction: "",
+					introduction: "introducción a capacitación dinámica",
 					notes: "",
 					services: [
 						{
@@ -123,7 +129,11 @@ export class Company {
 								"Celdas de trabajo",
 								"Servicio interno"
 							],
-							description: "Proporcionar a los niveles de mando medios herramientas de liderazgo y planeación que fortalezca su liderazgo y capacidad de manejo de grupo."
+							description: "Proporcionar a los niveles de mando medio, herramientas de liderazgo y planeación que fortalezcan su liderazgo y capacidad de manejo de grupo.",
+							image: {
+								name: "escuela-de-supervisores.png",
+								alt: "escuela-de-supervisores"
+							}
 						},
 						{
 							name: "Blockapacitación",
@@ -133,7 +143,11 @@ export class Company {
 								"Calidad y mejora continua",
 								"Desarrollo de talento emprendedor y de socios."
 							],
-							description: "Por medio de diversas actividades lúdicas los asistentes practicarán diferentes principios de eficiencia y eficacia para potenciar las competencias de colaboración y liderazgo."
+							description: "Por medio de diversas actividades lúdicas los asistentes practicarán diferentes principios de eficiencia y eficacia para potenciar las competencias de colaboración y liderazgo.",
+							image: {
+								name: "blockapacitacion.png",
+								alt: "blockapacitacion"
+							}
 						},
 						{
 							name: "Liderazgo gerencial",
@@ -144,7 +158,11 @@ export class Company {
 								"Liderazgo",
 								"Coaching"
 							],
-							description: "Entrenar a los mandos medios en el estilo de liderazgo que se debe ejercer para soportar las actividades del SAC."
+							description: "Entrenar a los mandos medios en el estilo de liderazgo que se debe ejercer para soportar las actividades del SAC.",
+							image: {
+								name: "liderazgo-gerencial.png",
+								alt: "liderazgo gerencial"
+							}
 						},
 						{
 							name: "Liderazgo de calidad",
@@ -154,7 +172,11 @@ export class Company {
 								"Introducción al SAC",
 								"Compromisos y conclusiones"
 							],
-							description: "Desarrollo de la capacidad de influir en el personal para asegurar el cumplimiento y resultado del SAC."
+							description: "Desarrollo de la capacidad de influir en el personal para asegurar el cumplimiento y resultado del SAC.",
+							image: {
+								name: "liderazgo-de-calidad.png",
+								alt: "liderazgo de calidad"
+							}
 						},
 						{
 							name: "Seminario de ventas",
@@ -163,7 +185,11 @@ export class Company {
 								"Manejo de objeciones",
 								"Manejo del cliente"
 							],
-							description: "Formar en el personal de ventas las habilidades necesarias que fortalecen la labor de venta y aseguran mejores resultados."
+							description: "Formar en el personal de ventas las habilidades necesarias que fortalecen la labor de venta y aseguran mejores resultados.",
+							image: {
+								name: "seminario-de-ventas.png",
+								alt: "seminario de ventas"
+							}
 						},
 						{
 							name: "Seminario de servicio al cliente",
@@ -173,7 +199,11 @@ export class Company {
 								"Impactos incrementales y decreméntales",
 								"Sistema efectivo de servicio"
 							],
-							description: "Proporcionar al participante los elementos prácticos que le permitan una atención acorde a las expectativas del cliente con relación al servicio ofrecido."
+							description: "Proporcionar al participante los elementos prácticos que le permitan una atención acorde a las expectativas del cliente con relación al servicio ofrecido.",
+							image: {
+								name: "seminario-de-servicio-al-cliente.png",
+								alt: "seminario de servicio al cliente"
+							}
 						},
 						{
 							name: "Manejo de actitudes",
@@ -182,7 +212,11 @@ export class Company {
 								"Fuentes determinantes de la actitud",
 								"Como se desarrollan actitudes positivas (Ciclo de la actitud)"
 							],
-							description: "Difundir entre los participantes los principios del manejo de actitudes como una forma innovadora de intervenir en los procesos organizacionales, a fin de mejorar el desempeño de la persona dentro y fuera de su entorno laboral."
+							description: "Difundir entre los participantes los principios del manejo de actitudes como una forma innovadora de intervenir en los procesos organizacionales, a fin de mejorar el desempeño de la persona dentro y fuera de su entorno laboral.",
+							image: {
+								name: "manejo-de-actitudes.png",
+								alt: "manejo de actitudes"
+							}
 						},
 						{
 							name: "Programa integral de desarrollo organizacional",
@@ -192,7 +226,11 @@ export class Company {
 								"Ventana de Yohari",
 								"Dinámica interactiva y de integración"
 							],
-							description: "Propicia la integración a través de la participación e involucramiento de todos los niveles de la organización."
+							description: "Propicia la integración a través de la participación e involucramiento de todos los niveles de la organización.",
+							image: {
+								name: "programa-integral-de-desarrollo-organizacional.png",
+								alt: "programa integral de desarrollo organizacional"
+							}
 						},
 						{
 							name: "Planes de sensibilización",
@@ -201,7 +239,11 @@ export class Company {
 								"Utilización del sistema",
 								"La fuerza de la actitud"
 							],
-							description: "Establecimiento del terreno propicio para integrar los esfuerzos de la organización para lograr el cambio grupal."
+							description: "Establecimiento del terreno propicio para integrar los esfuerzos de la organización para lograr el cambio grupal.",
+							image: {
+								name: "planes-de-sensibilidad.png",
+								alt: "planes de sensibilidad"
+							}
 						},
 						{
 						name: "Sesiones de Team Building",
@@ -215,21 +257,25 @@ export class Company {
 							"Puedan separar temas personales del trabajo",
 							"Acepte y reconozca la constante del cambio"
 						],
-						description: "Fomentar el espíritu de cuerpo por medio de distintos ejercicios grupales que generan un fuerte impacto en la conciencia organizacional."
+						description: "Fomentar el espíritu de cuerpo por medio de distintos ejercicios grupales que generan un fuerte impacto en la conciencia organizacional.",
+						image: {
+							name: "sesiones-de-team-building.png",
+							alt: "sesiones de team building"
+						}
 						}
 					],
 				},
 				image: {
-					name: "capacitacion-dinamica.jpg",
+					name: "capacitacion-dinamica.png",
 					alt: "capacitación dinámica"
 				}
 			},
 			{
-				name: "Consultoría",
-				description: "consultoría en ISO 9001, Reingeniería de procesos y desarrollo organizacional",
+				name: "Procesos de intervención",
+				description: "Consultoría en ISO 9001-15, Reingeniería de Procesos y Desarrollo Organizacional.",
 				services: [
 					{
-						name: "ISO 9001",
+						name: "ISO 9001-15",
 						description: "description explicando el servicio 1"
 					},
 					{
@@ -248,15 +294,19 @@ export class Company {
 					],
 					services: [
 						{
-							name: "Consultoría en ISO 9000",
+							name: "Consultoría en ISO 9001",
 							objectives: [
-								"Implementación de norma ISO 9001 v. 2015",
+								"Implementación de norma ISO 9001-15 v. 2015",
 								"Desarrollo de auditores internos",
 								"Auditorias de tercera parte",
 								"Proyecto 5 ́S",
 								"Análisis de riesgos"
 							],
-							description: ""
+							description: "",
+							image: {
+								name: "consultoria-en-iso-9001.png",
+								alt: "consultoría en ISO 9001-15"
+							}
 						},
 						{
 							name: "Consultoría de procesos",
@@ -266,7 +316,11 @@ export class Company {
 								"Elaboración de Manual de Organización: Descripción de puestos, Elaboración de perfiles de puesto Elaboración políticas corporativas",
 								"Auditorias de productividad avanzada: Auditoria de tercera parte para evaluar aplicación de mejoras, Auditorias de diagnóstico"
 							],
-							description: ""
+							description: "",
+							image: {
+								name: "consultoria-de-procesos.png",
+								alt: "consultoría de procesos"
+							}
 						},
 						{
 							name: "Desarrollo organizacional",
@@ -280,18 +334,22 @@ export class Company {
 								"Programas de integración / Team Building",
 								"Programa de Implementación 5 ́S / Capacitación Integral"
 							],
-							description: ""
+							description: "",
+							image: {
+								name: "desarrollo-organizacional.png",
+								alt: "desarrollo-organizacional"
+							}
 						},
 					],
 				},
 				image: {
-					name: "consultoria.jpg",
+					name: "consultoria.png",
 					alt: "consultoria"
 				}
 			},
 			{
 				name: "Soporte a Recursos Humanos",
-				description: "Estudios socioeconómicos a nivel nacional, Estudios poligráficos y estudios psicométricos",
+				description: "Estudios socioeconómicos a nivel nacional, Estudios poligráficos y Estudios psicométricos",
 				services: [
 					{
 						name: "Estudios socioeconómicos de cobertura nacional",
@@ -317,34 +375,58 @@ export class Company {
 						{
 							name: "Estudios socioeconómicos",
 							objectives: [
-								""
+								"Corroborar la forma de vida, hábitos y aspiraciones, en general, estalecer en que ambiente se desarrolla el candidato",
+								"saber las necesidades económicas y sociales de los colaboradores",
+								"ampliar la información que se tiene del candidato en su expadiente laboral"
+
 							],
-							description: "Permiten conocer el entorno económico, social, cultural y laboral de una persona para así identificar posibles condiciones de riesgo."
+							description: "Permiten conocer el entorno económico, social, cultural y laboral de una persona para así identificar posibles condiciones de riesgo.",
+							image: {
+								name: "estudios-socioeconomicos.png",
+								alt: "estudios-socioeconómicos"
+							}
 						},
 						{
 							name: "Estudios psicométricos",
 							objectives: [
-								""
+								"Medir el potencial del candidato para desempeñarse efectivamente",
+								"Identificar situaciones laborales en las que necesite apoyo y orientación",
+								"Identificar trastornos del comportamiento que podrían afectar directamante en el desempeño laboral",
 							],
-							description: "Encargados de medir cualidades de inteligencia, personalidad y psicológicas para determinar la similitud con los requerimientos del puesto a ocupar"
+							description: "Encargados de medir cualidades de inteligencia, personalidad y psicológicas para determinar la similitud con los requerimientos del puesto a ocupar",
+							image: {
+								name: "estudios-psicometricos.png",
+								alt: "estudio psicométrico"
+							}
 						},
 						{
 							name: "Estudios poligráficos",
 							objectives: [
-								""
+								"97% de confiabilidad en los resultados",
+								"Acreditados por American Polygraph Asociation",
+								"Permisos federales de Secretaría de Gobernación y de la Comisión Nacional de Seguridad"
 							],
-							description: "Es un estudio que se encarga de detectar reacciones psico-fisiológicas de una persona, para determinar el"
+							description: "Es un estudio que se encarga de detectar reacciones psico-fisiológicas de una persona, para determinar el grado de veracidad de sus respuestas",
+							image: {
+								name: "estudios-poligraficos.png",
+								alt: "estudios poligráficos"
+							}
 						},
 					],
 				},
 				image: {
-					name: "soporte-rh.jpg",
+					name: "soporte-rh.png",
 					alt: "soporte a recursos humanos"
 				}
 			}
 		];
 
 		//SPONSORS
+		//DILAC-> escuela de supervisores
+		//FERROENVASES -> auditores internos
+		//UNITEC -> socioeconomicos
+		//REPLASA -> Proyecto
+		//GRUPO ISMARK -> ISO 9001
 	this.sponsors = [
 			{
 				path : 'assets/sponsors/sponsorMonteDePiedad.png',

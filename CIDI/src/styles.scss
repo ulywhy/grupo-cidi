@@ -13,6 +13,14 @@ body {
 	text-align: justify;
 }
 
+.img-rounded {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  width: 240px;
+  height: 240px
+}
+
 .footer-card{
   text-align: left;
   border-top: 1px solid #bbb;

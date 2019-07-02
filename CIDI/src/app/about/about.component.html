@@ -1,6 +1,6 @@
 <div fxLayout='column'>
 
-	<mat-tab-group>
+	<mat-tab-group dynamicHeight="false">
 		<mat-tab>
 			<ng-template mat-tab-label>
 				Nosotros
@@ -21,11 +21,12 @@
 				</mat-card-content>
 			</mat-card>
 		</mat-tab>
-		<mat-tab>
+		<mat-tab fxFlex="auto">
 			<ng-template mat-tab-label>
 				Misión
 			</ng-template>
-			<mat-card>
+			<div fxLayout="column">
+			<mat-card fxFlex="none">
 				<mat-card-header>
 					<mat-card-title>
 					</mat-card-title>
@@ -34,6 +35,8 @@
 					{{company.mission}}
 				</mat-card-content>
 			</mat-card>
+			<span fxFlex="grow"></span>
+			</div>
 		</mat-tab>
 		<mat-tab>
 			<ng-template mat-tab-label>
