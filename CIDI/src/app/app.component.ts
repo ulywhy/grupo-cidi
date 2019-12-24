@@ -1,6 +1,7 @@
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { ModalImageComponent } from './modal-image/modal-image.component';
 
 @Component({
 	selector: 'app-root',

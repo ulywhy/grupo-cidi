@@ -1,3 +1,5 @@
+
+
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
 	<!-- navbar !-->
 	<app-navbar [sidenav]="snav"></app-navbar>
@@ -14,7 +16,13 @@
 
     <mat-sidenav-content fxLayout="column">
 			<!-- content !-->
-			<router-outlet (activate)="onActivate($event, outlet)" #outlet fxFlex></router-outlet>
+        <!--
+        MODAL IMAGE	
+        -->
+        <app-modal-image></app-modal-image>
+        
+        
+        <router-outlet (activate)="onActivate($event, outlet)" #outlet fxFlex></router-outlet>
 
 			<!--footer !-->
 			<app-footer fxFlex></app-footer>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CompanyService } from '.././company.service';
 import { Company } from '.././company';
+import { ModalImageComponent } from './../modal-image/modal-image.component';
 
 @Component({
   selector: 'app-home',

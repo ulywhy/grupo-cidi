@@ -33,9 +33,8 @@ import { MoreOnSolutionComponent } from './more-on-solution/more-on-solution.com
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { ModalImageComponent } from './modal-image/modal-image.component';
 
-//MDBootstrap
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -46,7 +45,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     MoreOnSolutionComponent,
     NavbarComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    ModalImageComponent
   ],
   imports: [
     BrowserModule,
@@ -68,8 +68,6 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 		MatFormFieldModule,
 		MatSelectModule,
 		MatInputModule,
-    //MDBootstrap
-    MDBootstrapModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

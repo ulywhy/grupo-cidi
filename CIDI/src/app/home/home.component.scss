@@ -53,3 +53,12 @@ tr.example-element-row:not(.example-expanded-row):active {
 .example-element-description-attribution {
   opacity: 0.5;
 }
+
+.season-banner{
+  width: 60%;
+}
+@media only screen and (max-width: 700px){
+  .season-banner {
+    width: 100%;
+  }
+}
